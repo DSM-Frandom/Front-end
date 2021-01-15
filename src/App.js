@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import FirstPage from './components/PUBLIC/firstPage' 
-import * as s from './components/STYLECOMPONENT/firstPageStyle'
+import * as s from './components/STYLECOMPONENT/publicStyle'
 import {BrowserRouter,Route, Switch} from 'react-router-dom'
 import NicknamePage from './components/PUBLIC/nicknamePage'
 import 미국 from './components/IMG/america.png'
 import 한국 from './components/IMG/korea.png'
 import 언어 from './components/IMG/language.png'
+import ChatingPage from './components/PUBLIC/chatingPage'
 
 function App() {
   const [margin, setMargin] = useState("103%");
@@ -28,6 +29,7 @@ function App() {
         <Switch>
         <Route exact path="/"><FirstPage Lang={LValue}></FirstPage></Route>
         <Route path="/nickname"><NicknamePage Lang={LValue}></NicknamePage></Route>
+        <Route path="/chating"><ChatingPage></ChatingPage></Route>
         </Switch>
         <s.LanguageSlide style={{marginRight:margin}}>
           <button>
