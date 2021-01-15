@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 const Background = styled.div`
 width:100%;
 height:100vh;
-background-color:#3BCAFF;
+background-color:#00ABEB; 
 overflow:hidden;
 display:flex;
 flex-direction:column;
@@ -37,19 +37,20 @@ h3{
     color:white;
     font-size:1.5vmin;
 }
-button{
+`
+
+const StartButton = styled.button`
     border-radius:16px;
     border:none;
     width:100%;
     height:100%;
     background-color:white;
-    color:#3BCAFF;
+    color:#00ABEB;
     font-size:2vmin;
     font-weight:bold;
     box-shadow:0px 3px 6px rgb(20,20,20,0.2);
     cursor: pointer;
     outline:none;
-} 
 `
 
 const ButtonContainer = styled.div`
@@ -57,6 +58,13 @@ margin-top:2%;
 width:16%;
 height:6.5%;
 `
+
+const ButtonContainer2 = styled.div`
+margin-top:0.9%;
+width:18%;
+height:6%;
+`
+
 
 const NicknameInput = styled.input`
 margin-top:1.5%;
@@ -76,7 +84,7 @@ box-shadow:0px 3px 6px rgb(20,20,20,0.2);
     color:#A7A7A7;
 }
 :focus{
-    border:1px solid yellow;
+    border:2px solid black;
 }
 `
 
@@ -88,7 +96,7 @@ margin-bottom:44%;
 margin-right:89%;
 position:absolute;
 z-index:30;
-background-color:#3BCAFF;
+background-color:#00ABEB;
 display:flex;
 border-radius:24px;
 transition:1s;
@@ -120,10 +128,76 @@ button{
 }
 `
 
+const ChatingContainer = styled.div`
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+`
+
+const NickSubButton = styled.button`
+width:100%;
+height:100%;
+background-color:rgb(50, 52, 58);
+margin-top:0.9%;
+border:none;
+color:white;
+font-size:1.8vmin;
+font-weight:bold;
+outline:none;
+cursor: pointer;
+:hover{
+    box-shadow:1px 3px 3px rgb(50, 52, 58, 0.4);
+}
+`
+
+const Loading = styled.div`
+width:100%;
+height:100%;
+position:absolute;
+background-color:rgb(0,0,0,0.7);
+z-index:33;
+display:flex;
+justify-content:center;
+align-items:center;
+`
+
+const LoadingBar = styled.div`
+width:4%;
+height:1%;
+color:black;
+position:absolute;
+display:flex;
+justify-content:flex-start;
+`
+
+const LoadingBarCont = styled.div`
+width:25%;
+height:40%;
+background-color:skyblue;
+border-radius:24px;
+transition:0.05s;
+opacity:0.7;
+`
+
+const LoadingText = styled.div`
+position:absolute;
+color:white;
+margin-top:6%;
+`
+
 export{
     Background,
     FirstPageContainer,
     ButtonContainer,
     NicknameInput,
-    LanguageSlide
+    LanguageSlide,
+    ChatingContainer,
+    NickSubButton,
+    StartButton,
+    Loading,
+    LoadingBar,
+    LoadingBarCont,
+    LoadingText,
+    ButtonContainer2
 }
