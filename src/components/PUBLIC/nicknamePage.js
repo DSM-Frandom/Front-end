@@ -1,14 +1,21 @@
-import React from 'react';
-import * as f from '../STYLECOMPONENT/firstPageStyle'
+import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom'
+import * as f from '../STYLECOMPONENT/publicStyle'
+import Loading from './loading'
 
 function NicknamePage(Lang){
     const a = Lang.Lang;
-    console.log(a)
+    const [toggle, setToggle] = useState();
+    const LinkStyle = {position:"relative", width:"100%", height:"100%"}
+    const changeToggle =()=>{setToggle(1);}
     return(
         <f.FirstPageContainer>
+            {(toggle==1)&&<Loading></Loading>}
             <h1> FRANDOM!</h1>
-            <h3>{(a==0)?"Please enter a nickname to use." : "사용할 닉네임을 입력해주세요."}</h3>
             <f.NicknameInput placeholder={(a==0)?"NICKNAME" : "사용할 닉네임"}></f.NicknameInput>
+            <f.ButtonContainer2>
+            <Link style={LinkStyle} to="/chating"><f.NickSubButton onClick={changeToggle}>{(a==0)?"SUBMIT" : "제출하기"}</f.NickSubButton></Link>
+            </f.ButtonContainer2>
         </f.FirstPageContainer>
     )
 }
