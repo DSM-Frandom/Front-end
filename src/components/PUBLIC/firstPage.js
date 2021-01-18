@@ -3,8 +3,6 @@ import * as f from '../STYLECOMPONENT/publicStyle'
 import {Link, BrowserRouter} from 'react-router-dom'
 
 function FirstPage(Lang){
-    console.log('sldkfj')
-    console.log(Lang.Lan)
     const a = Lang.Lang;
     const LinkStyle = {position:"relative", width:"100%", height:"100%"}
     return(
