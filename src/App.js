@@ -29,7 +29,7 @@ function App() {
         <Switch>
         <Route exact path="/"><FirstPage Lang={LValue}></FirstPage></Route>
         <Route path="/nickname"><NicknamePage Lang={LValue}></NicknamePage></Route>
-        <Route path="/chating"><ChatingPage></ChatingPage></Route>
+        <Route path="/chating"><ChatingPage Lang={LValue}></ChatingPage></Route>
         </Switch>
         <s.LanguageSlide style={{marginRight:margin}}>
           <button>
@@ -38,7 +38,7 @@ function App() {
             <img src={언어} alt="" onClick={chooseLanguage}/>
           </button>
         </s.LanguageSlide>
-        <a>{(a==0)?"Made by dsm, in highschool" : "DSM에서 제작되었습니다."}</a>
+{/*         <a>{(a==0)?"Made by dsm, in highschool" : "DSM에서 제작되었습니다."}</a> */}
       </s.Background>
     </BrowserRouter>
   );
