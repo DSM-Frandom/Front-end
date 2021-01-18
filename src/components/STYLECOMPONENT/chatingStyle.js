@@ -6,9 +6,11 @@ height:100%;
 background-color:#F5F5F5;
 display:flex;
 overflow:hidden;
+transition:1s;
 `
 
 const SideBar = styled.div`
+transition:1s;
 width:16%;
 height:100%;
 background-color:white;
@@ -39,6 +41,7 @@ box-shadow:0px -3px 6px rgb(0,0,0,0.2);
 display:flex;
 justify-content:center;
 align-items:center;
+transition:1s;
 `
 
 const InputChatBox = styled.div`
@@ -57,16 +60,18 @@ border-radius:10px 0px 0px 10px;
 outline:none;
 padding: 0 3%;
 font-size:1.7vmin;
-color:gray;
-:focus{
-    border:1px solid black;
+color:rgb(0,0,0);
+transition:1s;
+::placeholder{
+    color:rgb(150,150,150);
 }
 `
 
 const SendChatBtn = styled.button`
 width:10%;
 height:105%;
-background:linear-gradient(#5E5E5E, rgb(70,70,70));
+/* background:linear-gradient(#5E5E5E, rgb(70,70,70)); */
+background-color:rgb(70,70,70);
 border:none;
 outline:none;
 border:1px solid #5E5E5E;
@@ -104,7 +109,7 @@ background-color:#F6F6F6;
 border-bottom:1px solid whitesmoke;
 width:100%;
 border:none;    
-color:rgb(0,0,0,0.4);
+color:rgb(170,170,170);
 box-shadow:0px -3px 3px rgb(0,0,0,0.1);
 font-size:1.3vmin;
 outline:none;

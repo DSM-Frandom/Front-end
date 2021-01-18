@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
 const Background = styled.div`
+overflow:hidden;
 width:100%;
 height:100vh;
 background-color:#00ABEB; 
@@ -12,7 +13,7 @@ align-items:center;
 a{
     position:absolute;
     color:white;
-    margin-top:45%;
+    margin-top:46%;
     font-size:1.3vmin;
 }
 `
