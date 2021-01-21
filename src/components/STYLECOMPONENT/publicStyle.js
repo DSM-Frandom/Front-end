@@ -1,10 +1,11 @@
 import styled, { keyframes } from 'styled-components'
+import {color} from '../../style/index'
 
-const Background = styled.div`
+export const Background = styled.div`
 overflow:hidden;
 width:100%;
 height:100vh;
-background-color:#00ABEB; 
+background-color:${color}; 
 overflow:hidden;
 display:flex;
 flex-direction:column;
@@ -18,7 +19,7 @@ a{
 }
 `
 
-const FirstPageContainer = styled.div`
+export const FirstPageContainer = styled.div`
 width:100%;
 height:100%;
 display:flex;
@@ -38,15 +39,24 @@ h3{
     color:white;
     font-size:1.5vmin;
 }
+form{
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+    
+}
 `
 
-const StartButton = styled.button`
-    border-radius:16px;
+export const StartButton = styled.button`
+    border-radius:3px;
     border:none;
     width:100%;
     height:100%;
     background-color:white;
-    color:#00ABEB;
+    color:${color};
     font-size:2vmin;
     font-weight:bold;
     box-shadow:0px 3px 6px rgb(20,20,20,0.2);
@@ -54,21 +64,21 @@ const StartButton = styled.button`
     outline:none;
 `
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
 margin-top:2%;
 width:16%;
 height:6.5%;
 `
 
-const ButtonContainer2 = styled.div`
+export const ButtonContainer2 = styled.div`
 margin-top:0.9%;
 width:18%;
 height:6%;
 `
 
 
-const NicknameInput = styled.input`
-margin-top:1.5%;
+export const NicknameInput = styled.input`
+margin-top:0.8%;
 width:15%;
 padding:0 1.5%;
 height:6%;
@@ -89,7 +99,7 @@ box-shadow:0px 3px 6px rgb(20,20,20,0.2);
 }
 `
 
-const LanguageSlide = styled.div`
+export const LanguageSlide = styled.div`
 width:10%;
 height:4%;
 background-color:blue;
@@ -97,7 +107,7 @@ margin-bottom:44%;
 margin-right:89%;
 position:absolute;
 z-index:30;
-background-color:#00ABEB;
+background-color:${color};
 display:flex;
 border-radius:24px;
 transition:1s;
@@ -129,14 +139,14 @@ button{
 }
 `
 
-const ChatingContainer = styled.div`
+export const ChatingContainer = styled.div`
 width:100%;
 height:100%;
 display:flex;
 justify-content:center;
 `
 
-const NickSubButton = styled.button`
+export const NickSubButton = styled.button`
 width:100%;
 height:100%;
 background-color:rgb(50, 52, 58);
@@ -152,7 +162,7 @@ cursor: pointer;
 }
 `
 
-const Loading = styled.div`
+export const Loading = styled.div`
 width:100%;
 height:100%;
 position:absolute;
@@ -163,7 +173,7 @@ justify-content:center;
 align-items:center;
 `
 
-const LoadingBar = styled.div`
+export const LoadingBar = styled.div`
 width:4%;
 height:1%;
 color:black;
@@ -172,7 +182,7 @@ display:flex;
 justify-content:flex-start;
 `
 
-const LoadingBarCont = styled.div`
+export const LoadingBarCont = styled.div`
 width:25%;
 height:40%;
 background-color:skyblue;
@@ -181,24 +191,29 @@ transition:0.05s;
 opacity:0.7;
 `
 
-const LoadingText = styled.div`
+export const LoadingText = styled.div`
 position:absolute;
 color:white;
 margin-top:6%;
 `
 
-export{
-    Background,
-    FirstPageContainer,
-    ButtonContainer,
-    NicknameInput,
-    LanguageSlide,
-    ChatingContainer,
-    NickSubButton,
-    StartButton,
-    Loading,
-    LoadingBar,
-    LoadingBarCont,
-    LoadingText,
-    ButtonContainer2
+export const SignUp = styled.div`
+position:absolute;
+width:40px;
+height:40px;
+right:0;
+top:0;
+background-color:white;
+border-radius:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:${color};
+margin-top:40px;
+margin-right:40px;
+cursor: pointer;
+i{
+    font-size:1.8vmin;
+    color:${color};
 }
+`
