@@ -4,7 +4,7 @@ import * as f from '../STYLECOMPONENT/publicStyle'
 let i = 0;
 function Loading() {
     const LoadArr = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330];
-    const LoadDisplay = LoadArr.map((e) => (<f.LoadingBar style={{ transform: "rotate(" + e + "deg)" }}><f.LoadingBarCont></f.LoadingBarCont></f.LoadingBar>));
+    const LoadDisplay = LoadArr.map((e,index) => (<f.LoadingBar key={index} style={{ transform: "rotate(" + e + "deg)" }}><f.LoadingBarCont></f.LoadingBarCont></f.LoadingBar>));
     useEffect(() => {
         let load = document.getElementById('loading');
         setInterval(() => {

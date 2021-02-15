@@ -3,7 +3,7 @@ import * as s from './styles'
 import {Link} from 'react-router-dom'
 
 const Match=()=>{
-    const LinkStyle = { position:"absolute", width:"13%", height:"6%", marginBottom : "37%"}
+    const LinkStyle = { height:"6%",position:"absolute",marginBottom:"40%" }
     return(
         <s.Background>
             <s.Title>FRANDOM!</s.Title>

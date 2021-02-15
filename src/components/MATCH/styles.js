@@ -7,6 +7,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
+min-width:1000px;
 `
 
 export const Title = styled.h1`
@@ -18,12 +19,12 @@ margin-bottom:0.7%;
 `
 
 export const MatchButton = styled.button`
-width:100%;
-height:100%;
+width:300px;
+height:60px;
 background-color:rgb(50, 52, 58);
-margin-top:1%;
+margin-top:30px;
 border:none;
 color:white;
-font-size:2vmin;
+font-size:20px;
 font-weight:bold;
 `

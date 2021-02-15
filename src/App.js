@@ -9,6 +9,7 @@ import 언어 from './components/IMG/language.png'
 import ChatingPage from './components/CHATINGPAGE/chatingPage'
 import GlobalStyled from './style/globalstyle'
 import SignUp from './components/SIGNUP/signup'
+import Match from './components/MATCH/match'
 
 function App() {
   const [margin, setMargin] = useState("103%");
@@ -31,11 +32,12 @@ function App() {
         <s.SignUp><Link to="/signup" style={{color:"black", display:"flex",justifyContent:"center",alignItems:"center", width:"100%",height:"100%", marginTop:"0"}}><i className="fas fa-sign-out-alt"></i></Link></s.SignUp>
         <Switch>
         <Route exact path="/"><FirstPage Lang={LValue}></FirstPage></Route>
-        <Route path="/nickname"><NicknamePage Lang={LValue}></NicknamePage></Route>
+        <Route exact path="/nickname"><NicknamePage Lang={LValue}></NicknamePage></Route>
         <Route path="/chating"><ChatingPage Lang={LValue}></ChatingPage></Route>
         <Route path="/signup"><SignUp></SignUp></Route>
+        <Route path="/nickname/match"><Match></Match></Route>
         </Switch>
-        <s.LanguageSlide style={{marginRight:margin}}>
+        <s.LanguageSlide style={{marginRight:margin,display:"none"}}>
           <button>
             <img src={미국} alt="" onClick={amarican}/>
             <img src={한국} alt="" onClick={korean}/>

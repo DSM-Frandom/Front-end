@@ -5,7 +5,6 @@ width:100%;
 height:100%;
 background-color:#F5F5F5;
 display:flex;
-overflow:hidden;
 transition:1s;
 z-index:100;
 min-width:100%;
@@ -24,6 +23,7 @@ box-shadow:3px 3px 6px rgb(0,0,0,0.2);
 export const ChatingContainer = styled.div`
 width:80%;
 height:100%;
+overflow:scroll;
 `
 
 export const RightSideBar = styled.div`
@@ -186,4 +186,16 @@ font-size:2vmin;
 font-weight:bold;
 word-break:break-all;
 line-height:150%;
+`
+
+export const Alram = styled.div`
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+color:gray;
+font-size:1.3vmin;
+p{
+    padding:20px 0;
+}
 `

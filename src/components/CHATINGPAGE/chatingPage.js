@@ -17,10 +17,11 @@ function ChatingPage(Lang) {
     const LightMode = () => {
         setMode('light')
     }
-    const [Chating, setChating] = useState([{you:"",me:""}])
+    const [Chating, setChating] = useState([])
 
     const [data, setData] = useState("");
 
+    const [name,setName] = useState("")
     useEffect(() => {
         // 소켓 연결
         socket.on("connect", () => {
@@ -38,19 +39,16 @@ function ChatingPage(Lang) {
 
         // 조인 룸
         socket.on("joinRoom", (nickname) => {
-            console.log("join Room")
-            console.log(nickname)
+            setName(nickname)
         })
     }, [])
 
     // 메세지 받기
     socket.on("receiveMessage", (e) => {
-        console.log('메세지')
         setChating([
             ...Chating,
-            {you:e,me:""}
+            {you:e}
         ])
-        console.log(e)
     })
 
     const Sub = (e) => {
@@ -61,7 +59,7 @@ function ChatingPage(Lang) {
         e.preventDefault();
         setChating([
             ...Chating,
-            {you:false,me:data}
+            {me:data}
         ])
         socket.emit("sendMessage", data)
         setData("")
@@ -70,11 +68,10 @@ function ChatingPage(Lang) {
         if (e.key === "Enter") {
             setChating([
                 ...Chating,
-                {you:false,me:data}
+                {me:data}
             ])
             socket.emit("sendMessage", data)
             setData("")
-            console.log(Chating)
         }
     }
 
@@ -91,7 +88,10 @@ function ChatingPage(Lang) {
                         <i className="fas fa-cog"></i>{(a === 0) ? "SETTING" : "설정"}
                     </c.SettingMenu>
                     <c.SettingChoose style={{ backgroundColor: (mode === 'dark') ? 'rgb(100,100,100)' : '' }}><i className="fas fa-exclamation"></i>{(a === 0) ? "REPORT" : "신고하기"}</c.SettingChoose>
-                    <c.SettingChoose style={{ backgroundColor: (mode === 'dark') ? 'rgb(100,100,100)' : '' }}><i className="fas fa-sign-out-alt"></i>{(a === 0) ? "EXIT" : "나가기"}</c.SettingChoose>
+                    <c.SettingChoose
+                        onClick={()=>{window.location.href="/nickname/match"}}
+                        style={{ backgroundColor: (mode === 'dark') ? 'rgb(100,100,100)' : '' }}><i className="fas fa-sign-out-alt"></i>{(a === 0) ? "EXIT" : "나가기"}
+                    </c.SettingChoose>
                     <c.SettingChoose
                         onClick={() => {
                             window.localStorage.setItem("token", " ")
@@ -102,11 +102,15 @@ function ChatingPage(Lang) {
             </c.SideBar>
             <c.ChatingContainer>
                 <c.Chating>
+                    <c.Alram>
+                        <p>랜덤채팅 상대를 찾고 있습니다....</p>
+                        <p>{name!=="" && name+" 님이 들어왔습니다."}</p>
+                    </c.Alram>
                     {Chating.map((res, index)=>{
                         return(
                             <div key ={index}>
-                            {res.me !== "" && res !== "" && <c.MyChating>{res.me}</c.MyChating>}
-                            {res.me === "" && res.you !== "" && <c.YouChating>{res.you}</c.YouChating>}
+                            {res.me!=="" && res.me !== undefined && <c.MyChating>{res.me}</c.MyChating>}
+                            {res.you!=="" && res.you !== undefined &&<c.YouChating>{res.you}</c.YouChating>}
                             </div>
                         )
                     })}
