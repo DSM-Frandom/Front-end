@@ -1,7 +1,5 @@
 import React from 'react'
 import * as s from './styles'
-import { io } from "socket.io-client";
-import {useEffect} from 'react' 
 import {Link} from 'react-router-dom'
 
 const Match=()=>{
