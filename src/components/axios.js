@@ -8,5 +8,8 @@ export const Request=(method, url, head, data)=>{
         data: data
     }).then((e)=>{
         console.log(e);
+        return e
     }).catch((err)=>console.log(err))
 } 
+
+//window.localStorage.getItem("token")
