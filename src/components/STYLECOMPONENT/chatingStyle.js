@@ -1,15 +1,18 @@
 import styled from 'styled-components'
 
-const ChatingBox = styled.div`
+export const ChatingBox = styled.div`
 width:100%;
 height:100%;
 background-color:#F5F5F5;
 display:flex;
 overflow:hidden;
 transition:1s;
+z-index:100;
+min-width:100%;
+min-height:100%;
 `
 
-const SideBar = styled.div`
+export const SideBar = styled.div`
 transition:1s;
 width:16%;
 height:100%;
@@ -18,19 +21,19 @@ z-index:35;
 box-shadow:3px 3px 6px rgb(0,0,0,0.2);
 `
 
-const ChatingContainer = styled.div`
+export const ChatingContainer = styled.div`
 width:80%;
 height:100%;
 `
 
-const RightSideBar = styled.div`
+export const RightSideBar = styled.div`
 width:4%;
 height:100%;
 background-color:#00ABEB;
 z-index:40;
 `
 
-const UnderBar = styled.div`
+export const UnderBar = styled.div`
 width:100%;
 height:10%;
 position:absolute;
@@ -42,16 +45,17 @@ display:flex;
 justify-content:center;
 align-items:center;
 transition:1s;
+min-width:100%;
 `
 
-const InputChatBox = styled.div`
+export const InputChatBox = styled.form`
 width:38%;
 height:50%;
 border:none;
 display:flex;
 `
 
-const InputChat = styled.input`
+export const InputChat = styled.input`
 width:80%;
 height:100%;
 padding:0 0;
@@ -67,7 +71,7 @@ transition:1s;
 }
 `
 
-const SendChatBtn = styled.button`
+export const SendChatBtn = styled.button`
 width:10%;
 height:105%;
 /* background:linear-gradient(#5E5E5E, rgb(70,70,70)); */
@@ -81,12 +85,12 @@ font-size:2vmin;
 cursor: pointer;
 `
 
-const SettingChat = styled.div`
+export const SettingChat = styled.div`
 width:100%;
 height:40%;
 `
 
-const SettingMenu = styled.div`
+export const SettingMenu = styled.div`
 height:12%;
 display:flex;
 align-items:center;
@@ -103,7 +107,7 @@ img{
 }
 `
 
-const SettingChoose = styled.button`
+export const SettingChoose = styled.button`
 padding:4% 0%;
 background-color:#F6F6F6;
 border-bottom:1px solid whitesmoke;
@@ -124,7 +128,7 @@ i{
 }
 `
 
-const UploadBox = styled.div`
+export const UploadBox = styled.div`
 padding:6% 0%;
 background-color:#F6F6F6;
 border-bottom:1px solid whitesmoke;
@@ -138,24 +142,48 @@ cursor: pointer;
 transition:0.5s;
 font-size:1.2vmin;
 display:flex;
-justify-content:center;
-align-items:center;
+    justify-content:center;
+    align-items:center;
 input{
     border:none;
     z-index:40;
 }
 `
-export{
-    ChatingBox,
-    SideBar,
-    ChatingContainer,
-    RightSideBar,
-    UnderBar,
-    InputChatBox,
-    InputChat,
-    SendChatBtn,
-    SettingChat,
-    SettingMenu,
-    SettingChoose,
-    UploadBox
-}
+
+export const Chating = styled.div`
+width:70%;
+height:85%;
+position:absolute;
+margin-left:5%;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+`
+
+export const MyChating = styled.div`
+width:30%;
+padding:20px 3%;
+border-radius:10px;
+background-color:#3075FF;
+margin-left:50%;
+margin-top:2%;
+color:white;
+font-size:2vmin;
+font-weight:bold;
+word-break:break-all;
+line-height:150%;
+`
+
+export const YouChating = styled.div`
+width:30%;
+padding:20px 3%;
+border-radius:10px;
+background-color:white;
+margin-left:20%;
+margin-top:2%;
+color:black;
+font-size:2vmin;
+font-weight:bold;
+word-break:break-all;
+line-height:150%;
+`

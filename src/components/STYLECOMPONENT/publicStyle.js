@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components'
 import {color} from '../../style/index'
+import styled from 'styled-components'
 
 export const Background = styled.div`
 overflow:hidden;
@@ -90,7 +90,7 @@ font-weight:bold;
 color:gray;
 box-shadow:0px 3px 6px rgb(20,20,20,0.2);
 ::placeholder{
-    font-size:2vmin;
+    font-size:1.4vmin;
     font-weight:bold;
     color:#A7A7A7;
 }
@@ -155,8 +155,6 @@ border:none;
 color:white;
 font-size:1.8vmin;
 font-weight:bold;
-outline:none;
-cursor: pointer;
 :hover{
     box-shadow:1px 3px 3px rgb(50, 52, 58, 0.4);
 }
